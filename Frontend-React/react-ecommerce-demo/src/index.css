@@ -1,0 +1,83 @@
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --bg-color: #f8f9fa;
+  --accent-color: #ffc107;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  color: #212529;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(33, 37, 41, 0.95) !important;
+}
+
+.card {
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  border-radius: 1.25rem;
+}
+
+.transition-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+.badge {
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.input-group-text {
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+.form-control {
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.smallest {
+  font-size: 0.7rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: "›";
+  font-size: 1.2rem;
+  line-height: 1;
+}
